@@ -4,27 +4,26 @@ library(readr)
 library(dplyr)
 
 # Read feature names and assign those to column names of X_test
-features <- read_delim("./data/features.txt", col_names = c("id", "feature_name"),delim = " ")
+features <- read_delim("./UCI HAR Dataset/features.txt", col_names = c("id", "feature_name"),delim = " ")
 
 # Read test datasets
-subject_test <- read_csv("./data/test/subject_test.txt", col_names = "subject")
-X_test <- read.table("./data/test/X_test.txt", sep = "" , header = F,
+subject_test <- read_csv("./UCI HAR Dataset/test/subject_test.txt", col_names = "subject")
+X_test <- read.table("./UCI HAR Dataset/test/X_test.txt", sep = "" , header = F,
                    na.strings ="", stringsAsFactors= F)
 
-y_test <- read_csv("./data/test/y_test.txt", col_names = "outcome") 
+y_test <- read_csv("./UCI HAR Dataset/test/y_test.txt", col_names = "outcome") 
 
-# Sssign feature names to column names of X_test
+# Assign feature names to column names of X_test
 colnames(X_test) <- features$feature_name
 
 test <- cbind(subject_test, X_test, y_test)
-# test <- data.frame(cbind(c(subject_test, X_test, y_test)))
 
 # Read train datasets
-subject_train <- read_csv("./data/train/subject_train.txt", col_names = "subject") 
-X_train <- read.table("./data/train/X_train.txt", sep = "" , header = F,
+subject_train <- read_csv("./UCI HAR Dataset/train/subject_train.txt", col_names = "subject") 
+X_train <- read.table("./UCI HAR Dataset/train/X_train.txt", sep = "" , header = F,
                      na.strings ="", stringsAsFactors= F)
 
-y_train <- read_csv("./data/train/y_train.txt", col_names = "outcome")
+y_train <- read_csv("./UCI HAR Dataset/train/y_train.txt", col_names = "outcome")
 colnames(X_train) <- features$feature_name
 
 
