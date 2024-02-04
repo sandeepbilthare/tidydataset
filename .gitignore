@@ -4,3 +4,5 @@
 .Ruserdata
 .data/test/Inertial Signals/
 .data/train/Inertial Signals/
+.data/test/X_test.txt
+.data/train/X_train.txt
