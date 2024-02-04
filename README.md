@@ -1,7 +1,7 @@
 
 ==================================================================
 
-This is a summary of dataset
+This project is an analysis of Human Activity Recognition Using Smartphones Dataset.
 The dataset used for this project is available at: http://archive.ics.uci.edu/dataset/240/human+activity+recognition+using+smartphones
 
 ==================================================================
